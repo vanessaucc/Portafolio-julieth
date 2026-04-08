@@ -6,7 +6,7 @@ const education = [
     degree: 'Ingeniería de Software',
     institution: 'Universidad Cooperativa de Colombia',
     location: 'Pasto, Nariño',
-    period: '2022 — Presente',
+    period: '2023 — Presente',
     description: 'Formación en desarrollo de software, arquitectura de sistemas, diseño de interfaces, bases de datos y trabajo en equipo. Participación en proyectos académicos interdisciplinarios.',
     icon: '🎓',
   },

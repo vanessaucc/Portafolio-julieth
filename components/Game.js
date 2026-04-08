@@ -82,7 +82,7 @@ export default function Game() {
       <span className="section-tag">Bonus interactivo</span>
       <h2 className="section-title">🎮 Typing <span>Challenge</span></h2>
       <p className={styles.subtitle}>
-        ¿Qué tan rápido puedes escribir código? ¡Pon a prueba tu velocidad de desarrolladora!
+        ¿Qué tan rápido puedes escribir código? Pon a prueba tu velocidad de desarrolladora
       </p>
 
       <div className={styles.box}>

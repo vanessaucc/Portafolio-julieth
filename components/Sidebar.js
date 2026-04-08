@@ -93,7 +93,7 @@ export default function Sidebar() {
           </a>
         </div>
 
-        <p className={styles.footer}>© 2025 Vanessa Mena</p>
+        <p className={styles.footer}>© 2026 Vanessa Mena</p>
       </aside>
     </>
   )
