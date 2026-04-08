@@ -38,7 +38,7 @@ export default function Testimonials() {
       <span className="section-tag">Lo que dicen</span>
       <h2 className="section-title"><span>Testimonios</span></h2>
       <p className={styles.intro}>
-        Opiniones de compañeros, docentes y colaboradores que han trabajado conmigo.
+        Perspectivas de colaboradores y profesionales de diversas áreas sobre mi trabajo, compromiso y habilidades en el desarrollo de software..
       </p>
 
       <div className={styles.grid}>
