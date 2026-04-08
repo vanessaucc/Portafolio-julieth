@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Julieth Vanessa Mena Ortega — Portfolio',
-  description: 'Ingeniería de Software | Desarrolladora Web | React · Next.js · Django',
+  description: 'Ingeniería de Software | Desarrolladora | React · Next.js · Django',
 }
 
 export default function RootLayout({ children }) {
