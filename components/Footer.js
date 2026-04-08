@@ -11,7 +11,7 @@ export default function Footer() {
           <span className={styles.logo}>VM</span>
           <div>
             <p className={styles.name}>Julieth Vanessa Mena Ortega</p>
-            <p className={styles.role}>Ingeniería de Software · Desarrolladora Web</p>
+            <p className={styles.role}>Ingeniería de Software </p>
           </div>
         </div>
 

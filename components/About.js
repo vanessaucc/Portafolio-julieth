@@ -22,9 +22,7 @@ export default function About() {
         {/* LEFT — text */}
         <div className={styles.text}>
           <p>
-            Soy una persona <strong>responsable, creativa y comprometida</strong> con el aprendizaje
-            constante. Disfruto enfrentar nuevos retos y trabajar en equipo para desarrollar
-            soluciones tecnológicas que generen impacto.
+            Soy una persona <strong>responsable, creativa y comprometida</strong> con el aprendizaje constante, siempre en búsqueda de mejorar mis habilidades tanto técnicas como personales. Disfruto enfrentar nuevos retos que me permitan salir de mi zona de confort y fortalecer mi capacidad de análisis y resolución de problemas. Me gusta trabajar en equipo, compartir ideas y aprender de los demás para construir soluciones tecnológicas eficientes, innovadoras y con impacto real.
           </p>
           <p>
             Me interesa especialmente el desarrollo web, tanto en <strong>frontend como en backend</strong>,
