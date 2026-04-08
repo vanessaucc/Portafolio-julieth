@@ -32,8 +32,7 @@ export default function About() {
             React, Next.js y Django.
           </p>
           <p>
-            Mi objetivo es crecer profesionalmente como desarrolladora y aportar valor
-            a través de la tecnología.
+            Mi objetivo es crecer profesionalmente como desarrolladora, fortaleciendo continuamente mis habilidades técnicas y mi capacidad de resolver problemas mediante la tecnología, manteniéndome en constante aprendizaje de nuevas herramientas y metodologías. Busco participar en proyectos desafiantes que me permitan aplicar mis conocimientos, adquirir experiencia y aportar valor a través de soluciones innovadoras que respondan a necesidades reales y generen un impacto positivo.
           </p>
 
           <div className={styles.facts}>
