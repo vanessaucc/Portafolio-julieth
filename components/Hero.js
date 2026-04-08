@@ -14,7 +14,7 @@ export default function Hero() {
           <h1 className={styles.title}>
             ¡Hola!<br />
             Soy <span>Vanessa</span><br />
-            <span className={styles.lastName}>Mena Ortega</span>
+            <span className={styles.lastName}>Mena</span>
           </h1>
           <div className={styles.roleTag}>
             <i className="fas fa-code"></i> Ingeniería de Software
