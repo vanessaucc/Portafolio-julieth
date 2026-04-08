@@ -23,7 +23,7 @@ const experience = [
   {
     role: 'Aprendiz de Desarrollo Frontend',
     company: 'Proyectos Personales',
-    period: '2022 — Presente',
+    period: '2023 — Presente',
     description: 'Creación de interfaces web responsivas, portafolios y componentes interactivos. Uso de HTML, CSS, JavaScript y frameworks modernos como React.',
     icon: '🎨',
   },
