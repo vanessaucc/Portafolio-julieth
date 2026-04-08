@@ -23,9 +23,7 @@ export default function Hero() {
             <i className="fas fa-rocket"></i> Lista para nuevos proyectos
           </div>
           <p className={styles.bio}>
-            Apasionada por el desarrollo web y la creación de soluciones digitales.
-            Transformo ideas en experiencias funcionales y atractivas, combinando
-            diseño, lógica y tecnología.
+            Soy una desarrolladora apasionada por el desarrollo web y la creación de soluciones digitales. Me gusta transformar ideas en experiencias funcionales, intuitivas y atractivas, combinando diseño, lógica y tecnología para construir productos eficientes, escalables y centrados en el usuario.
           </p>
           <div className={styles.actions}>
             <a href="#projects" className="btn btn--primary">
