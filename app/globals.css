@@ -3,10 +3,10 @@
    ============================================ */
 
 :root {
-  --purple-100: #f3e8ff;
-  --purple-200: #e9d5ff;
+  --purple-100: #2d1f4a;
+  --purple-200: #3d2860;
   --purple-300: #d8b4fe;
-  --purple-400: #c084fe;
+  --purple-400: #c084fc;
   --purple-500: #a855f7;
   --purple-600: #9333ea;
   --purple-700: #7c3aed;
@@ -17,12 +17,12 @@
   --dark-2: #231535;
   --dark-3: #2e1a47;
   --mid: #4b2e72;
-  --light-bg: #faf5ff;
-  --white: #ffffff;
-  --gray-light: #f5f0fc;
-  --gray-mid: #9ca3af;
-  --text-dark: #1e1030;
-  --text-body: #4b3a6e;
+  --light-bg: #1e1b2e;
+  --white: #2a2540;
+  --gray-light: #2e2a45;
+  --gray-mid: #a78bca;
+  --text-dark: #f0e6ff;
+  --text-body: #c4b5fd;
 
   --accent: #c084fc;
   --accent-glow: rgba(192, 132, 252, 0.4);
