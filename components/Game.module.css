@@ -62,7 +62,7 @@
 .codeDisplay {
   background: #0d0117;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(192,132,252,0.2);
+  border: 1px solid rgba(132, 25, 239, 0.2);
   overflow: hidden;
   margin-bottom: 1rem;
   cursor: text;
