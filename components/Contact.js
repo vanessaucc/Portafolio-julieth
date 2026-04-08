@@ -21,8 +21,7 @@ export default function Contact() {
       <span className="section-tag">Conectemos</span>
       <h2 className="section-title">Ponte en <span>Contacto</span></h2>
       <p className={styles.intro}>
-        ¡Estoy abierta a oportunidades de aprendizaje, colaboración y crecimiento
-        en el área del desarrollo de software!
+        Estoy abierta a oportunidades que me permitan seguir aprendiendo, colaborar en proyectos y crecer profesionalmente en el área del desarrollo de software, aportando mis conocimientos, compromiso y ganas de mejorar continuamente.
       </p>
 
       <div className={styles.grid}>
