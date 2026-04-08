@@ -3,32 +3,32 @@ import styles from './Testimonials.module.css'
 
 const testimonials = [
   {
-    name: 'Oliver Martínez',
-    role: 'Compañero de equipo — UCC',
+    name: 'Yasmin Andrade',
+    role: 'Abogada - Universidad de Nariño',
     avatar: '👨‍💻',
     stars: 5,
-    text: 'Vanessa es una desarrolladora muy comprometida. Siempre aporta soluciones creativas al equipo y tiene una capacidad increíble para aprender nuevas tecnologías rápidamente. Trabajar con ella en proyectos académicos ha sido una experiencia enriquecedora.',
+    text: 'Vanessa es una desarrolladora muy comprometida. Desde una perspectiva jurídica, destaco su responsabilidad, ética profesional y capacidad para analizar problemas con lógica y precisión. Siempre propone soluciones claras y bien fundamentadas, lo que hace que trabajar con ella sea una experiencia muy enriquecedora.',
   },
   {
-    name: 'Jenny Salazar',
-    role: 'Docente Ing. Software — UCC',
+    name: 'Luis Alfonso Diaz',
+    role: 'Contador público - Docente Universidad Mariana',
     avatar: '👩‍🏫',
     stars: 5,
-    text: 'Julieth Vanessa demuestra una atención excepcional al detalle en el desarrollo de interfaces y soluciones tecnológicas. Su dedicación y capacidad de adaptación a nuevas herramientas la destacan entre sus compañeros.',
+    text: 'Julieth Vanessa demuestra una gran atención al detalle, algo fundamental tanto en el desarrollo de software como en el área contable. Su organización, disciplina y capacidad para estructurar soluciones eficientes la destacan. Tiene una excelente gestión del tiempo y siempre entrega resultados de calidad.',
   },
   {
-    name: 'Luna Rodríguez',
-    role: 'Compañera de proyectos',
+    name: 'Juan David Benavidez',
+    role: 'Biólogo - Universidad de Nariño',
     avatar: '👩‍💼',
     stars: 5,
-    text: 'Siempre organizada, puntual y con ideas que mejoran la calidad de los proyectos. Vanessa tiene una habilidad natural para diseñar interfaces amigables y funcionales. Aprende muy rápido y trabaja de manera colaborativa.',
+    text: 'Vanessa tiene una forma muy interesante de abordar los problemas, similar al pensamiento científico: observa, analiza y propone soluciones efectivas. Su capacidad de aprendizaje rápido y su trabajo colaborativo la hacen destacar en cualquier equipo. Además, diseña interfaces intuitivas y funcionales.',
   },
   {
-    name: 'Marko Torres',
-    role: 'Monitor académico — UCC',
+    name: 'Carolina Ortega',
+    role: 'Química - Universidad de Nariño',
     avatar: '👨‍🎓',
     stars: 5,
-    text: 'Me impresiona la forma en que Vanessa aborda los problemas de programación. Tiene un pensamiento analítico sólido y una gran capacidad para documentar y estructurar su código. Una futura gran desarrolladora.',
+    text: 'Me impresiona la forma en que Vanessa resuelve problemas complejos, aplicando un pensamiento lógico y estructurado, muy similar al que usamos en química. Su código es ordenado, bien documentado y eficiente. Sin duda, tiene un gran potencial como desarrolladora.',
   },
 ]
 
