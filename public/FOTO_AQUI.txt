@@ -1,0 +1,11 @@
+Guarda tu foto aquí con el nombre exacto: vanessa.jpg
+
+La foto debe ser:
+- Nombre: vanessa.jpg
+- Ubicación: esta carpeta (public/)
+- Formato: JPG o PNG (si es PNG, renombra las referencias en el código a vanessa.png)
+
+Tu foto aparecerá en:
+- El círculo del Hero (sección principal)
+- El avatar del Sidebar (menú lateral)
+- El logo del Footer
