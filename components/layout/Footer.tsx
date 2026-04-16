@@ -4,22 +4,20 @@ import { useLang } from '@/context/LangContext'
 const navKeys = ['home','about','projects','experience','testimonials','game','contact'] as const
 
 const socials = [
-  { href: 'https://github.com/vanessaucc',                        icon: 'fab fa-github',      label: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/vanessa-mena-a9a642324/', icon: 'fab fa-linkedin-in',  label: 'LinkedIn' },
-  { href: 'https://www.instagram.com/mena_julieth_/?hl=es',      icon: 'fab fa-instagram',    label: 'Instagram' },
-  { href: 'https://www.facebook.com/vanessa.mena.206258/',        icon: 'fab fa-facebook-f',   label: 'Facebook' },
+  { href: 'https://github.com/vanessaucc',                        icon: 'fab fa-github',     label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/vanessa-mena-a9a642324/', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
 ]
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const { t } = useLang()
   const f = t.footer
-
   const navLinks = navKeys.map(k => [`#${k}`, t.nav[k]] as [string, string])
 
   return (
     <footer className="bg-[linear-gradient(160deg,#22182c_0%,#2e1a47_100%)] text-white/50 py-12 pr-16 pl-12 border-t border-brand-400/15 max-[900px]:px-6">
       <div className="grid grid-cols-[1.5fr_1fr_1fr] gap-12 mb-10 pb-10 border-b border-white/[0.08] items-start max-[900px]:grid-cols-1 max-[900px]:gap-8">
+
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center flex-shrink-0 shadow-glow-sm relative">
             <span className="font-display font-extrabold text-[1.1rem] text-white">VM</span>
@@ -41,7 +39,7 @@ export default function Footer() {
 
         <div>
           <p className="font-display font-bold text-[0.8rem] uppercase tracking-[0.1em] text-white/40 mb-3">{f.follow}</p>
-          <div className="flex gap-3 flex-wrap">
+          <div className="flex gap-3">
             {socials.map(s => (
               <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
                 className="w-10 h-10 rounded-full bg-white/[0.07] border border-brand-400/25 flex items-center justify-center text-brand-300 text-[0.95rem] no-underline transition-all hover:bg-brand-600 hover:border-brand-500 hover:text-white hover:-translate-y-0.5">

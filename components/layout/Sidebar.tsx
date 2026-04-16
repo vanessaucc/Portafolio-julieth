@@ -34,7 +34,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <button onClick={() => setOpen(o => !o)} aria-label="Menú"
+      {/* Mobile hamburger */}
+      <button onClick={() => setOpen(o => !o)} aria-label="Menu"
         className="hidden max-[900px]:flex fixed top-4 left-4 z-[300] w-11 h-11 rounded-lg bg-brand-600 border-0 text-white text-lg cursor-pointer items-center justify-center shadow-glow-sm hover:bg-brand-700 transition-colors">
         <i className={open ? 'fas fa-times' : 'fas fa-bars'} />
       </button>
@@ -47,18 +48,18 @@ export default function Sidebar() {
         <div className="w-[72px] h-[72px] rounded-full overflow-hidden bg-gradient-to-br from-brand-500 to-brand-800 flex items-center justify-center relative mb-2.5 shadow-[0_0_0_3px_rgba(192,132,252,0.3),0_0_20px_rgba(168,85,247,0.3)] flex-shrink-0">
           <span className="font-display font-extrabold text-xl text-white">VM</span>
           <img src="/vanessa.jpg" alt="Vanessa Mena"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top"
             onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
         </div>
         <p className="font-display font-bold text-[0.88rem] text-white text-center leading-[1.3] mb-0.5">Vanessa<br />Mena</p>
-        <p className="text-[0.65rem] text-brand-300 text-center uppercase tracking-[0.1em]">Ing. Software</p>
+        <p className="text-[0.65rem] text-brand-300 text-center uppercase tracking-[0.1em]">Software Eng.</p>
 
         {/* Theme + Language toggles */}
         <div className="flex gap-2 mt-3 w-full">
           <button onClick={toggleTheme}
             className="flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg bg-white/[0.07] hover:bg-brand-600 text-brand-300 hover:text-white text-[0.7rem] font-semibold transition-all border border-brand-400/20 cursor-pointer">
             <i className={theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'} />
-            <span>{theme === 'dark' ? 'Claro' : 'Oscuro'}</span>
+            <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
           </button>
           <button onClick={toggleLang}
             className="flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg bg-white/[0.07] hover:bg-brand-600 text-brand-300 hover:text-white text-[0.7rem] font-bold transition-all border border-brand-400/20 cursor-pointer tracking-widest">
@@ -84,15 +85,13 @@ export default function Sidebar() {
         </nav>
 
         <div className="w-full h-px bg-white/[0.07] my-4" />
-        <div className="flex gap-1.5 mb-3 flex-wrap justify-center">
+        <div className="flex gap-2 mb-3">
           {[
             { href: 'https://github.com/vanessaucc',                        icon: 'fab fa-github' },
             { href: 'https://www.linkedin.com/in/vanessa-mena-a9a642324/', icon: 'fab fa-linkedin-in' },
-            { href: 'https://www.instagram.com/mena_julieth_/?hl=es',      icon: 'fab fa-instagram' },
-            { href: 'https://www.facebook.com/vanessa.mena.206258/',        icon: 'fab fa-facebook-f' },
           ].map(s => (
             <a key={s.icon} href={s.href} target="_blank" rel="noopener noreferrer"
-              className="w-[30px] h-[30px] rounded-full bg-white/[0.07] border border-brand-400/20 flex items-center justify-center text-brand-300 text-[0.78rem] no-underline transition-all hover:bg-brand-600 hover:text-white hover:border-brand-500">
+              className="w-[32px] h-[32px] rounded-full bg-white/[0.07] border border-brand-400/20 flex items-center justify-center text-brand-300 text-[0.8rem] no-underline transition-all hover:bg-brand-600 hover:text-white hover:border-brand-500">
               <i className={s.icon} />
             </a>
           ))}

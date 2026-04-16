@@ -57,8 +57,8 @@ export const translations = {
     },
     game: {
       tag: 'Bonus interactivo',
-      title: 'Typing',
-      titleSpan: 'Challenge',
+      title: 'Habilidades de',
+      titleSpan: 'Escritura',
       description: '¿Qué tan rápido puedes escribir código? Pon a prueba tu velocidad de desarrolladora',
       accuracy: 'Precisión',
       time: 'Tiempo',
@@ -158,7 +158,7 @@ export const translations = {
     game: {
       tag: 'Interactive bonus',
       title: 'Typing',
-      titleSpan: 'Challenge',
+      titleSpan: 'Skills',
       description: 'How fast can you type code? Test your developer typing speed',
       accuracy: 'Accuracy',
       time: 'Time',
