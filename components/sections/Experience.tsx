@@ -10,9 +10,9 @@ function TimelineItem({ item, delay }: { item: TimelineEntry; delay: number }) {
   return (
     <AnimateIn delay={delay} direction="up">
       <div className="flex gap-4 relative">
-        <div className="w-10 h-10 min-w-[40px] rounded-full bg-brand-500/10 dark:bg-brand-100/20 border-2 border-brand-500/40 dark:border-brand-300/50 flex items-center justify-center text-base relative z-10"
+        <div className="w-10 h-10 min-w-[40px] rounded-full bg-brand-500/10 dark:bg-brand-100/20 border-2 border-brand-500/40 dark:border-brand-300/50 flex items-center justify-center text-brand-500 text-base relative z-10"
           style={{ boxShadow: '0 0 0 4px var(--surface-card)' }}>
-          <i className={item.icon} style={{ color: 'var(--brand-500)' }} />
+          <i className={item.icon} />
         </div>
         <div className="card flex-1 !p-5">
           <div className="text-[0.72rem] font-bold tracking-[0.08em] uppercase text-brand-500 mb-1 font-display">{item.period}</div>
