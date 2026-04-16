@@ -3,7 +3,7 @@ export type Lang = 'es' | 'en'
 export const translations = {
   es: {
     nav: {
-      home: 'Inicio', about: 'Acerca de mí', projects: 'Proyectos',
+      home: 'Inicio', about: 'Acerca de mí', ai: 'IA', projects: 'Proyectos',
       experience: 'Experiencia', testimonials: 'Testimonios', game: 'Juego', contact: 'Contacto',
     },
     hero: {
@@ -37,6 +37,12 @@ export const translations = {
       ],
       techStack: 'Stack Tecnológico',
     },
+    ai: {
+      tag: 'Herramientas modernas',
+      title: 'IA que',
+      titleSpan: 'Utilizo',
+      description: 'Integro herramientas de inteligencia artificial en mi flujo de trabajo para aumentar la productividad, mejorar la calidad del código y acelerar el desarrollo.',
+    },
     projects: {
       tag: 'Mi trabajo',
       title: 'Mis',
@@ -69,10 +75,10 @@ export const translations = {
       finishedSub: (wpm: number, acc: number, time: number) =>
         `${wpm} WPM con ${acc}% de precisión en ${time}s`,
       ratings: [
-        { max: 30,  text: '🐢 Sigue practicando' },
-        { max: 50,  text: '⚡ ¡Buen ritmo!' },
-        { max: 70,  text: '🚀 ¡Velocidad dev!' },
-        { max: Infinity, text: '🔥 ¡Eres una máquina!' },
+        { max: 30,  text: 'Sigue practicando' },
+        { max: 50,  text: '¡Buen ritmo!' },
+        { max: 70,  text: '¡Velocidad de desarrollador!' },
+        { max: Infinity, text: '¡Eres una máquina!' },
       ],
     },
     contact: {
@@ -89,7 +95,7 @@ export const translations = {
       messageLabel: 'Mensaje',
       messagePlaceholder: 'Cuéntame sobre tu proyecto, propuesta o idea...',
       sendBtn: 'Enviar mensaje',
-      successMsg: '¡Mensaje enviado! Te responderé pronto 🚀',
+      successMsg: '¡Mensaje enviado! Te responderé pronto.',
       callout: '¡Cuéntame sobre tu proyecto o idea! Estoy lista para colaborar.',
     },
     footer: {
@@ -103,7 +109,7 @@ export const translations = {
 
   en: {
     nav: {
-      home: 'Home', about: 'About me', projects: 'Projects',
+      home: 'Home', about: 'About me', ai: 'AI', projects: 'Projects',
       experience: 'Experience', testimonials: 'Testimonials', game: 'Game', contact: 'Contact',
     },
     hero: {
@@ -137,6 +143,12 @@ export const translations = {
       ],
       techStack: 'Tech Stack',
     },
+    ai: {
+      tag: 'Modern tooling',
+      title: 'AI Tools I',
+      titleSpan: 'Use',
+      description: 'I integrate AI tools into my workflow to boost productivity, improve code quality and speed up development.',
+    },
     projects: {
       tag: 'My work',
       title: 'My',
@@ -169,10 +181,10 @@ export const translations = {
       finishedSub: (wpm: number, acc: number, time: number) =>
         `${wpm} WPM with ${acc}% accuracy in ${time}s`,
       ratings: [
-        { max: 30,  text: '🐢 Keep practicing' },
-        { max: 50,  text: '⚡ Good pace!' },
-        { max: 70,  text: '🚀 Dev speed!' },
-        { max: Infinity, text: '🔥 You\'re a machine!' },
+        { max: 30,  text: 'Keep practicing' },
+        { max: 50,  text: 'Good pace!' },
+        { max: 70,  text: 'Developer speed!' },
+        { max: Infinity, text: 'You\'re a machine!' },
       ],
     },
     contact: {
@@ -189,7 +201,7 @@ export const translations = {
       messageLabel: 'Message',
       messagePlaceholder: 'Tell me about your project, proposal or idea...',
       sendBtn: 'Send message',
-      successMsg: 'Message sent! I\'ll reply soon 🚀',
+      successMsg: 'Message sent! I\'ll reply soon.',
       callout: 'Tell me about your project or idea! I\'m ready to collaborate.',
     },
     footer: {
