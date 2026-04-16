@@ -8,7 +8,7 @@ export default function Projects() {
   const p = t.projects
 
   return (
-    <section id="projects" className="py-20 pr-16 pl-12 min-h-screen flex flex-col justify-center relative bg-surface max-[900px]:py-16 max-[900px]:px-6">
+    <section id="projects" className="py-20 px-6 sm:px-10 lg:px-16 min-h-screen flex flex-col justify-center relative bg-surface">
       <SectionHeader tag={p.tag}>{p.title} <span>{p.titleSpan}</span></SectionHeader>
       <p className="mb-10 text-base text-ink-secondary max-w-[600px] leading-[1.7]">{p.description}</p>
 

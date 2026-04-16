@@ -19,7 +19,7 @@ export default function Testimonials() {
   const tm = t.testimonials
 
   return (
-    <section id="testimonials" className="py-20 pr-16 pl-12 min-h-screen flex flex-col justify-center relative bg-surface max-[900px]:py-16 max-[900px]:px-6">
+    <section id="testimonials" className="py-20 px-6 sm:px-10 lg:px-16 min-h-screen flex flex-col justify-center relative bg-surface">
       <SectionHeader tag={tm.tag}><span>{tm.title}</span></SectionHeader>
       <p className="mb-10 text-base text-ink-secondary max-w-[500px] leading-[1.7]">{tm.description}</p>
 

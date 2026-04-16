@@ -46,7 +46,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 pr-16 pl-12 flex flex-col justify-center relative bg-surface-card max-[900px]:py-12 max-[900px]:px-6">
+    <section id="contact" className="py-16 px-6 sm:px-10 lg:px-16 flex flex-col justify-center relative bg-surface-card">
       <SectionHeader tag={c.tag}>{c.title} <span>{c.titleSpan}</span></SectionHeader>
       <p className="mb-8 text-base text-ink-secondary max-w-[500px] leading-[1.7]">{c.description}</p>
 

@@ -1,96 +1,133 @@
-# 🟣 Portafolio — Julieth Vanessa Mena Ortega
+# Vanessa Mena — Portfolio
 
-Portafolio personal desarrollado con **Next.js 14**, CSS Modules y React Hooks.
+Personal developer portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Features a bilingual UI (ES/EN), dark/light theme, interactive typing game, and a working contact form.
 
-## 🚀 Cómo correr el proyecto
+## Features
 
-### 1. Instalar dependencias
+- **Bilingual** — ES/EN toggle with full translation support
+- **Dark/Light mode** — persisted via `localStorage`
+- **Responsive** — mobile-first design, tested from 375px to 1440px
+- **Sections**: Hero · About · Projects · Experience · Testimonials · Typing game · Contact
+- **Contact form** — sends email via [Resend](https://resend.com), with server-side validation
+- **Typing game** — measure your WPM and accuracy on real code snippets
+
+## Tech Stack
+
+| Area | Technology |
+|------|-----------|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v3 |
+| Icons | Font Awesome 6 (CDN) |
+| Email | Resend API |
+| Fonts | Google Fonts (Inter + Space Grotesk) |
+| Deployment | Vercel |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
 ```bash
+git clone https://github.com/vanessaucc/portfolio.git
+cd portfolio
 npm install
 ```
 
-### 2. Correr en modo desarrollo
+### Environment variables
+
+Create a `.env.local` file in the project root:
+
+```env
+RESEND_API_KEY=re_your_api_key_here
+```
+
+To obtain a Resend API key:
+1. Sign up at [resend.com](https://resend.com) (free tier: 100 emails/day)
+2. Go to **API Keys** and create a new key
+3. Paste it into `.env.local`
+
+> **Without the key**: the contact form still works in development — messages are logged to the terminal console instead of being emailed.
+
+### Run locally
+
 ```bash
 npm run dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Open [http://localhost:3000](http://localhost:3000).
 
-### 3. Compilar para producción
+### Build for production
+
 ```bash
 npm run build
 npm start
 ```
 
-## 📁 Estructura del proyecto
+## Contact Form — How It Works
+
+The form at `/contact` sends a `POST` request to the Next.js API route `app/api/contact/route.ts`.
+
+**Server-side validation:**
+- All fields (`name`, `email`, `message`) are required
+- Email is validated against a basic regex
+- Message must be at least 10 characters
+
+**Email delivery:**
+- Sent via Resend SDK to `vmena7604@gmail.com`
+- The sender is shown as `Portfolio Contact <onboarding@resend.dev>`
+- The `replyTo` header is set to the visitor's email so you can reply directly
+
+**Error handling:**
+- `400` — validation failed (missing/invalid fields)
+- `500` — Resend API error
+- `200` — success; form resets and shows a confirmation banner
+
+## Project Structure
 
 ```
-portfolio/
-├── app/
-│   ├── layout.js          # Layout raíz con fuentes y metadata
-│   ├── page.js            # Página principal
-│   └── globals.css        # Estilos globales + variables de color
-│
-├── components/
-│   ├── Sidebar.js/.module.css       # Menú lateral con navegación activa
-│   ├── SocialFloat.js/.module.css   # Íconos sociales flotantes a la derecha
-│   ├── Hero.js/.module.css          # Sección bienvenida + stats animados
-│   ├── About.js/.module.css         # Acerca de mí + barras de habilidades
-│   ├── Projects.js/.module.css      # Tarjetas de proyectos con links
-│   ├── Experience.js/.module.css    # Timeline académico y laboral
-│   ├── Testimonials.js/.module.css  # Grid de 4 testimonios
-│   ├── Game.js/.module.css          # 🎮 Typing Speed Challenge
-│   ├── Contact.js/.module.css       # Formulario + info de contacto
-│   └── Footer.js/.module.css        # Pie de página
-│
-└── public/
-    └── cv-vanessa-mena.pdf          # ← Agrega tu CV aquí
+app/
+  api/contact/route.ts   # Contact form API endpoint
+  globals.css            # CSS variables + Tailwind layers
+  layout.tsx             # Root layout (fonts, ThemeProvider)
+  page.tsx               # Main page (all sections composed here)
+components/
+  layout/
+    TopNav.tsx           # Fixed top navigation bar
+    SocialFloat.tsx      # Floating social links (right side)
+    Footer.tsx
+  sections/
+    Hero.tsx
+    About.tsx
+    Projects.tsx
+    Experience.tsx
+    Testimonials.tsx
+    Game.tsx             # Typing speed game
+    Contact.tsx
+  ui/
+    SectionHeader.tsx
+context/
+  LangContext.tsx        # ES/EN language context
+  ThemeProvider.tsx      # Dark/light mode provider
+data/                    # Static data: skills, projects, experience, translations
+public/
+  vanessa.jpg            # Profile photo
+  cv-vanessa-mena.pdf    # Downloadable CV
 ```
 
-## 🎨 Paleta de colores
+## Deployment
 
-| Variable | Color | Uso |
-|---|---|---|
-| `--purple-400` | `#c084fc` | Acento principal |
-| `--purple-500` | `#a855f7` | Botones, badges |
-| `--purple-700` | `#7c3aed` | Textos morado oscuro |
-| `--dark` | `#1a1025` | Sidebar y footer |
-| `--light-bg` | `#faf5ff` | Fondo de secciones |
+The project is configured for zero-config deployment on **Vercel**:
 
-## 📝 Personalización
+1. Push to GitHub
+2. Import the repo in [vercel.com](https://vercel.com)
+3. Add `RESEND_API_KEY` in **Settings → Environment Variables**
+4. Deploy
 
-### Agregar tu foto de perfil
-En `components/Hero.js`, reemplaza:
-```jsx
-<div className={styles.photoPlaceholder}>
-  <i className="fas fa-user"></i>
-</div>
-```
-Por:
-```jsx
-<div className={styles.photoPlaceholder}>
-  <img src="/tu-foto.jpg" alt="Vanessa Mena" />
-</div>
-```
-Y coloca tu foto en `public/tu-foto.jpg`.
+## License
 
-### Agregar tu CV
-Coloca tu archivo PDF en `public/cv-vanessa-mena.pdf`.
-
-### Actualizar proyectos
-Edita el array `projects` en `components/Projects.js` y actualiza los links de GitHub y demo.
-
-## 🌐 Deploy en Vercel
-
-```bash
-# Instala Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-O conecta tu repositorio de GitHub directamente en [vercel.com](https://vercel.com).
-
----
-Hecho con 💜 en Pasto, Colombia
+© 2025 Vanessa Mena. All rights reserved.

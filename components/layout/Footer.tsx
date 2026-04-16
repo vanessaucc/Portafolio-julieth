@@ -15,7 +15,7 @@ export default function Footer() {
   const navLinks = navKeys.map(k => [`#${k}`, t.nav[k]] as [string, string])
 
   return (
-    <footer className="bg-[linear-gradient(160deg,#22182c_0%,#2e1a47_100%)] text-white/50 py-12 pr-16 pl-12 border-t border-brand-400/15 max-[900px]:px-6">
+    <footer className="bg-[linear-gradient(160deg,#22182c_0%,#2e1a47_100%)] text-white/50 py-12 px-6 sm:px-10 lg:px-16 border-t border-brand-400/15">
       <div className="grid grid-cols-[1.5fr_1fr_1fr] gap-12 mb-10 pb-10 border-b border-white/[0.08] items-start max-[900px]:grid-cols-1 max-[900px]:gap-8">
 
         <div className="flex items-center gap-4">

@@ -31,7 +31,7 @@ export default function Experience() {
   const e = t.experience
 
   return (
-    <section id="experience" className="py-20 pr-16 pl-12 min-h-screen flex flex-col justify-center relative bg-surface-card max-[900px]:py-16 max-[900px]:px-6">
+    <section id="experience" className="py-20 px-6 sm:px-10 lg:px-16 min-h-screen flex flex-col justify-center relative bg-surface-card">
       <SectionHeader tag={e.tag}>{e.title} <span>{e.titleSpan}</span></SectionHeader>
 
       <div className="grid grid-cols-2 gap-12 mt-6 max-[900px]:grid-cols-1">
