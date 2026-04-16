@@ -60,11 +60,12 @@ export default function Game() {
   ]
 
   return (
-    <section id="game" className="py-20 pr-16 pl-12 min-h-screen flex flex-col justify-center relative bg-[linear-gradient(135deg,#22182c_0%,#2e1a47_100%)] max-[900px]:py-16 max-[900px]:px-6">
+    <section id="game" className="py-20 px-6 sm:px-10 lg:px-16 min-h-screen flex flex-col items-center justify-center relative bg-[linear-gradient(135deg,#22182c_0%,#2e1a47_100%)]">
+      <div className="section-inner flex flex-col items-center text-center">
       <SectionHeader tag={g.tag} dark>🎮 {g.title} <span>{g.titleSpan}</span></SectionHeader>
       {g.description && <p className="text-brand-300/80 mb-6 text-[0.95rem] leading-[1.6] max-w-[500px]">{g.description}</p>}
 
-      <div className="bg-white/[0.04] border border-brand-400/20 rounded-card p-8 max-w-[700px]">
+      <div className="bg-white/[0.04] border border-brand-400/20 rounded-card p-8 w-full max-w-[800px]">
         <div className="flex gap-6 mb-6">
           {stats.map(s => (
             <div key={s.label} className="flex flex-col items-center gap-1 flex-1 p-4 bg-white/[0.05] rounded-lg border border-brand-400/15">
@@ -105,6 +106,7 @@ export default function Game() {
           </div>
         )}
         <button className="btn btn--primary mt-2" onClick={newSnippet}><i className="fas fa-shuffle" /> {g.newSnippet}</button>
+      </div>
       </div>
     </section>
   )
