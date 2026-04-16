@@ -159,7 +159,7 @@ export const translations = {
       tag: 'Interactive bonus',
       title: 'Typing',
       titleSpan: 'Skills',
-      description: 'How fast can you type code? Test your developer typing speed',
+      description: '',
       accuracy: 'Accuracy',
       time: 'Time',
       bestWpm: 'Best WPM',
