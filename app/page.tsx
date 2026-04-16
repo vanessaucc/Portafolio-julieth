@@ -18,6 +18,7 @@ export default function Home() {
       <main className="pt-16 w-full">
         <Hero />
         <About />
+        <AiTools />
         <Projects />
         <Experience />
         <Testimonials />

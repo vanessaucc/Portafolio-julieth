@@ -1,7 +1,7 @@
 'use client'
 import { useLang } from '@/context/LangContext'
 
-const navKeys = ['home','about','projects','experience','testimonials','game','contact'] as const
+const navKeys = ['home','about','ai','projects','experience','testimonials','game','contact'] as const
 
 const socials = [
   { href: 'https://github.com/vanessaucc',                        icon: 'fab fa-github',     label: 'GitHub' },
