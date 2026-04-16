@@ -11,9 +11,9 @@ export default function Hero() {
       className="relative overflow-hidden min-h-[calc(100vh-4rem)] flex items-center py-16 px-6 sm:px-10 lg:px-16"
       style={{ background: 'linear-gradient(135deg, var(--surface) 0%, var(--hero-end) 100%)' }}
     >
-      {/* Ambient glow */}
-      <div className="absolute w-[600px] h-[600px] -top-32 right-0 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.1)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute w-[400px] h-[400px] bottom-0 -left-20 rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.07)_0%,transparent_70%)] pointer-events-none" />
+      {/* Ambient glow — animated */}
+      <div className="absolute w-[600px] h-[600px] -top-32 right-0 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.1)_0%,transparent_70%)] pointer-events-none animate-float-slow" />
+      <div className="absolute w-[400px] h-[400px] bottom-0 -left-20 rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.07)_0%,transparent_70%)] pointer-events-none animate-float-alt" />
 
       <div className="section-inner grid grid-cols-2 gap-12 items-center max-lg:gap-8 max-[768px]:grid-cols-1 max-[768px]:text-center">
 
