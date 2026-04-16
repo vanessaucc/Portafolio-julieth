@@ -35,7 +35,7 @@ export default function Testimonials() {
                 <StarRating stars={item.stars} />
                 <p className="text-[0.9rem] leading-[1.7] text-ink-secondary italic flex-1">&ldquo;{item.text}&rdquo;</p>
                 <div className="flex items-center gap-3 border-t border-brand-500/20 pt-3">
-                  <div className="w-[42px] h-[42px] rounded-full bg-brand-500/10 border-2 border-brand-500/25 flex items-center justify-center text-[1.3rem]">
+                  <div className="w-[42px] h-[42px] rounded-full bg-brand-500/15 border-2 border-brand-500/25 flex items-center justify-center text-brand-600 dark:text-brand-300 font-display font-bold text-[0.85rem]">
                     {item.avatar}
                   </div>
                   <div>
