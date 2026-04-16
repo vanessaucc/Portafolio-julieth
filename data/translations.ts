@@ -7,7 +7,7 @@ export const translations = {
       experience: 'Experiencia', testimonials: 'Testimonios', game: 'Juego', contact: 'Contacto',
     },
     hero: {
-      tag: 'Bienvenida',
+      tag: 'Bienvenidos',
       greeting: '¡Hola!\nSoy',
       tagline1: 'Ingeniería de Software',
       tagline2: 'Lista para nuevos proyectos',
