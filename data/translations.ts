@@ -59,7 +59,7 @@ export const translations = {
       tag: 'Bonus interactivo',
       title: 'Habilidades de',
       titleSpan: 'Escritura',
-      description: '¿Qué tan rápido puedes escribir código? Pon a prueba tu velocidad de desarrolladora',
+      description: '',
       accuracy: 'Precisión',
       time: 'Tiempo',
       bestWpm: 'Mejor WPM',
