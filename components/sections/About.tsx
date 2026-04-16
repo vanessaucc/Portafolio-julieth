@@ -9,7 +9,6 @@ export default function About() {
 
   return (
     <section id="about" className="py-16 px-6 sm:px-10 lg:px-16 flex flex-col justify-center relative bg-surface-card">
-      <div className="section-inner">
       <SectionHeader tag={a.tag}>{a.title} <span>{a.titleSpan}</span></SectionHeader>
 
       <div className="grid grid-cols-2 gap-10 items-start max-[900px]:grid-cols-1">
