@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from '@/components/ui/ThemeProvider'
 import { useLang } from '@/context/LangContext'
 
-const navKeys = ['home','about','projects','experience','testimonials','game','contact'] as const
+const navKeys = ['home','about','ai','projects','experience','testimonials','game','contact'] as const
 
 export default function TopNav() {
   const [active, setActive]     = useState('#home')
@@ -14,7 +14,6 @@ export default function TopNav() {
 
   const navItems = navKeys.map(k => ({ href: `#${k}`, label: t.nav[k] }))
 
-  // Scroll spy + shadow on scroll
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 8)
@@ -30,9 +29,8 @@ export default function TopNav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close menu on resize to desktop
   useEffect(() => {
-    const onResize = () => { if (window.innerWidth >= 900) setMenuOpen(false) }
+    const onResize = () => { if (window.innerWidth >= 1024) setMenuOpen(false) }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
@@ -44,9 +42,9 @@ export default function TopNav() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-[200] h-16 flex items-center px-8 max-[600px]:px-4 transition-all duration-300 ${
+      <header className={`fixed top-0 left-0 right-0 z-[200] h-16 flex items-center px-6 sm:px-8 transition-all duration-300 ${
         scrolled
-          ? 'bg-surface/90 backdrop-blur-md border-b border-brand-500/15 shadow-[0_2px_20px_rgba(124,58,237,0.08)]'
+          ? 'bg-surface/92 backdrop-blur-md border-b border-brand-500/15 shadow-[0_2px_20px_rgba(124,58,237,0.08)]'
           : 'bg-transparent'
       }`}>
 
@@ -61,14 +59,14 @@ export default function TopNav() {
           <span className="font-display font-bold text-[0.9rem] text-ink-primary hidden sm:block">Vanessa Mena</span>
         </a>
 
-        {/* Desktop nav links — center */}
-        <nav className="hidden md:flex items-center gap-1 mx-auto">
+        {/* Desktop nav — hidden below 1024px */}
+        <nav className="hidden lg:flex items-center gap-0.5 mx-auto">
           {navItems.map(item => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => handleNavClick(item.href)}
-              className={`px-3 py-1.5 rounded-lg text-[0.8rem] font-medium no-underline transition-all duration-200 ${
+              className={`px-3 py-1.5 rounded-lg text-[0.78rem] font-medium no-underline transition-all duration-200 whitespace-nowrap ${
                 active === item.href
                   ? 'text-brand-500 bg-brand-500/10'
                   : 'text-ink-secondary hover:text-ink-primary hover:bg-brand-500/8'
@@ -79,8 +77,8 @@ export default function TopNav() {
           ))}
         </nav>
 
-        {/* Right side: toggles */}
-        <div className="flex items-center gap-2 ml-auto md:ml-0">
+        {/* Right side toggles */}
+        <div className="flex items-center gap-2 ml-auto lg:ml-0">
           <button
             onClick={toggleTheme}
             title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
@@ -97,28 +95,31 @@ export default function TopNav() {
             <span>{lang === 'es' ? 'EN' : 'ES'}</span>
           </button>
 
-          {/* Mobile hamburger */}
+          {/* Mobile hamburger — shown below 1024px */}
           <button
             onClick={() => setMenuOpen(o => !o)}
-            aria-label="Menu"
-            className="md:hidden w-9 h-9 rounded-lg flex items-center justify-center text-ink-primary bg-brand-500/10 hover:bg-brand-500/20 transition-all cursor-pointer border-0 ml-1"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-ink-primary bg-brand-500/10 hover:bg-brand-500/20 transition-all cursor-pointer border-0 ml-1"
           >
-            <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-sm`} />
+            <i className={`fas ${menuOpen ? 'fa-xmark' : 'fa-bars'} text-sm`} />
           </button>
         </div>
       </header>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown */}
       {menuOpen && (
         <>
-          <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[190] md:hidden" onClick={() => setMenuOpen(false)} />
-          <nav className="fixed top-16 left-4 right-4 z-[195] md:hidden bg-surface-card rounded-2xl border border-brand-500/20 shadow-glow p-3 flex flex-col gap-1">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[190] lg:hidden"
+            onClick={() => setMenuOpen(false)}
+          />
+          <nav className="fixed top-16 left-3 right-3 z-[195] lg:hidden bg-surface-card rounded-2xl border border-brand-500/20 shadow-[0_8px_40px_rgba(124,58,237,0.2)] p-3 flex flex-col gap-1">
             {navItems.map(item => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className={`flex items-center px-4 py-3 rounded-xl text-[0.88rem] font-medium no-underline transition-all ${
+                className={`flex items-center px-4 py-3 rounded-xl text-[0.9rem] font-medium no-underline transition-all ${
                   active === item.href
                     ? 'bg-brand-500/15 text-brand-500 font-semibold'
                     : 'text-ink-secondary hover:bg-brand-500/8 hover:text-ink-primary'

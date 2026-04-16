@@ -15,12 +15,13 @@ export default function Projects() {
       <div className="grid grid-cols-2 gap-6 max-[700px]:grid-cols-1">
         {projects.map((proj, i) => (
           <div key={i} className="card flex flex-col gap-3">
-            <div className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center text-2xl border-2"
+            <div className="w-[52px] h-[52px] rounded-[14px] flex items-center justify-center text-2xl border-2 flex-shrink-0"
               style={{
                 background: `color-mix(in srgb, ${proj.color} 15%, var(--surface-card))`,
                 borderColor: `color-mix(in srgb, ${proj.color} 25%, var(--surface-card))`,
+                color: proj.color,
               }}>
-              {proj.icon}
+              <i className={proj.icon} />
             </div>
             <h3 className="font-display font-bold text-base text-ink-primary leading-[1.3]">{proj.title}</h3>
             <p className="text-[0.85rem] leading-[1.6] text-ink-secondary flex-1">{proj.description}</p>
