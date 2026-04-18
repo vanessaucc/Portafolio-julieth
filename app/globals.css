@@ -42,21 +42,42 @@
 
 @layer components {
   .card {
-    @apply bg-surface-card rounded-card p-6 border border-brand-200/30 shadow-card transition-all duration-300;
+    @apply bg-surface-card rounded-card p-6 border border-brand-200/30 shadow-card transition-all duration-300 relative overflow-hidden;
   }
+  /* Shimmer on card hover */
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.06) 50%, transparent 60%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+  }
+  .card:hover::after { transform: translateX(100%); }
   .card:hover { @apply -translate-y-1 shadow-glow border-brand-500/40; }
 
   .badge {
     @apply inline-block px-3 py-1 rounded-full text-xs font-semibold font-display
-           bg-brand-700/10 text-brand-700 dark:bg-brand-100/20 dark:text-brand-300;
+           bg-brand-700/10 text-brand-700 dark:bg-brand-100/20 dark:text-brand-300
+           transition-all duration-200;
   }
+  .badge:hover { @apply bg-brand-500/15 text-brand-600 dark:text-brand-200; }
 
   .btn {
     @apply inline-flex items-center gap-2 px-7 py-3 rounded-full font-display font-bold
            text-sm tracking-wide no-underline cursor-pointer border-0 transition-all duration-300;
   }
-  .btn--primary { @apply bg-brand-500 text-white shadow-glow-sm; }
-  .btn--primary:hover { @apply bg-brand-700 -translate-y-0.5 shadow-glow-lg; }
+  .btn--primary {
+    @apply bg-brand-500 text-white shadow-glow-sm;
+    background-size: 200% auto;
+    background-image: linear-gradient(135deg, #a855f7 0%, #7c3aed 50%, #a855f7 100%);
+    background-position: left center;
+  }
+  .btn--primary:hover {
+    @apply -translate-y-0.5 shadow-glow-lg;
+    background-position: right center;
+  }
   .btn--outline { @apply bg-transparent text-brand-700 dark:text-brand-400 border-2 border-brand-500/50 dark:border-brand-300/50; }
   .btn--outline:hover { @apply bg-brand-500/10 border-brand-600 dark:bg-brand-100/10 dark:border-brand-400 -translate-y-0.5; }
 
@@ -76,6 +97,11 @@
 }
 
 /* ── Keyframe animations ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes float-slow {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33%       { transform: translate(24px, -18px) scale(1.04); }
@@ -98,7 +124,22 @@
   50%       { opacity: 0; }
 }
 
+/* Hero entry — applied directly to elements with inline animationDelay */
+.hero-fade-up {
+  animation: fade-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .animate-float-slow  { animation: float-slow  10s ease-in-out infinite; }
 .animate-float-alt   { animation: float-alt   13s ease-in-out infinite; }
 .animate-heart-pulse { animation: heart-pulse  1.2s ease-in-out infinite; }
 .animate-blink       { animation: blink 1s step-end infinite; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up,
+  .animate-float-slow,
+  .animate-float-alt,
+  .animate-float,
+  .animate-heart-pulse { animation: none; }
+  .card::after { display: none; }
+}

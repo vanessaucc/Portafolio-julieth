@@ -22,6 +22,13 @@ export const aiTools: AiTool[] = [
     descEn: 'Code analysis, technical documentation and software architecture assistance.',
   },
   {
+    name: 'Gemini',
+    icon: 'fas fa-gem',
+    color: '#4285f4',
+    descEs: 'Modelo multimodal de Google para generación de texto, código y análisis de imágenes.',
+    descEn: 'Google\'s multimodal model for text generation, coding and image analysis.',
+  },
+  {
     name: 'GitHub Copilot',
     icon: 'fab fa-github',
     color: '#a855f7',
@@ -36,17 +43,10 @@ export const aiTools: AiTool[] = [
     descEn: 'AI-powered code editor with refactoring and code generation capabilities.',
   },
   {
-    name: 'Hugging Face',
-    icon: 'fas fa-microchip',
-    color: '#f59e0b',
-    descEs: 'Plataforma de modelos de ML para NLP, visión por computadora y pipelines de IA.',
-    descEn: 'ML model platform for NLP, computer vision and AI pipelines.',
-  },
-  {
-    name: 'Midjourney',
-    icon: 'fas fa-palette',
-    color: '#ec4899',
-    descEs: 'Generación de imágenes con IA para prototipos de interfaz y recursos visuales.',
-    descEn: 'AI image generation for interface prototyping and visual assets.',
+    name: 'v0 by Vercel',
+    icon: 'fas fa-wand-magic-sparkles',
+    color: '#e879f9',
+    descEs: 'Generación de componentes UI con IA a partir de descripciones en lenguaje natural.',
+    descEn: 'AI-powered UI component generation from natural language descriptions.',
   },
 ]
