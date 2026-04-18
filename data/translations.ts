@@ -3,7 +3,7 @@ export type Lang = 'es' | 'en'
 export const translations = {
   es: {
     nav: {
-      home: 'Inicio', about: 'Acerca de mí', ai: 'IA', projects: 'Proyectos',
+      home: 'Inicio', about: 'Acerca de mí', ai: 'Herramientas', projects: 'Proyectos',
       experience: 'Experiencia', testimonials: 'Testimonios', game: 'Juego', contact: 'Contacto',
     },
     hero: {
@@ -11,13 +11,13 @@ export const translations = {
       greeting: '¡Hola!\nSoy',
       tagline1: 'Ingeniería de Software',
       tagline2: 'Lista para nuevos proyectos',
-      bio: 'Soy una desarrolladora apasionada por el desarrollo web y la creación de soluciones digitales. Me gusta transformar ideas en experiencias funcionales, intuitivas y atractivas.',
+      bio: 'Desarrolladora enfocada en crear soluciones digitales funcionales y atractivas. Apasionada por el frontend moderno y el aprendizaje constante.',
       cta1: 'Ver Proyectos',
       cta2: 'Descargar CV',
       stats: [
         { n: '10+', l: 'Proyectos' },
         { n: '3+',  l: 'Años estudiando' },
-        { n: '5+',  l: 'Tecnologías' },
+        { n: '6+',  l: 'Tecnologías' },
       ],
     },
     about: {
@@ -25,9 +25,9 @@ export const translations = {
       title: 'Acerca de',
       titleSpan: 'Mí',
       paragraphs: [
-        'Soy una persona <strong>responsable, creativa y comprometida</strong> con el aprendizaje constante, siempre buscando mejorar mis habilidades técnicas y personales.',
-        'Me interesa el desarrollo web en <strong>frontend y backend</strong>, fortaleciendo mis habilidades en React, Next.js y Django.',
-        'Mi objetivo es crecer como desarrolladora, participar en proyectos desafiantes y aportar soluciones innovadoras con impacto real.',
+        'Soy estudiante de <strong>Ingeniería de Software</strong> y desarrolladora enfocada en la creación de soluciones digitales funcionales y atractivas. Me caracterizo por ser responsable, creativa y por mantener un aprendizaje constante para mejorar tanto a nivel técnico como personal.',
+        'Mi mayor interés está en el <strong>desarrollo frontend</strong>, donde disfruto construir interfaces modernas e intuitivas con <strong>React y Next.js</strong>, complementando mis habilidades con backend en Django para tener una visión más completa del desarrollo.',
+        'He participado en proyectos colaborativos que han fortalecido mi trabajo en equipo y mi capacidad para resolver problemas. También me interesa integrar <strong>inteligencia artificial</strong> en aplicaciones para aportar valor real. Mi objetivo es seguir creciendo, asumir nuevos retos y crear soluciones con impacto.',
       ],
       facts: [
         { icon: 'fas fa-graduation-cap', label: 'Universidad', val: 'UCC Pasto' },
@@ -38,16 +38,16 @@ export const translations = {
       techStack: 'Stack Tecnológico',
     },
     ai: {
-      tag: 'Herramientas modernas',
-      title: 'IA que',
-      titleSpan: 'Utilizo',
-      description: 'Integro herramientas de inteligencia artificial en mi flujo de trabajo para aumentar la productividad, mejorar la calidad del código y acelerar el desarrollo.',
+      tag: 'Productividad aumentada',
+      title: 'Herramientas inteligentes',
+      titleSpan: 'que utilizo',
+      description: 'Integro herramientas de IA en mi flujo de trabajo para escribir mejor código, documentar más rápido y explorar soluciones creativas en cada proyecto.',
     },
     projects: {
       tag: 'Mi trabajo',
       title: 'Mis',
       titleSpan: 'Proyectos',
-      description: 'Proyectos enfocados en el aprendizaje y aplicación de conceptos de ingeniería de software, desde desarrollo web hasta sistemas de monitoreo.',
+      description: 'Proyectos que reflejan mi aprendizaje y aplicación de ingeniería de software: desde interfaces desplegadas hasta sistemas de monitoreo y plataformas educativas.',
     },
     experience: {
       tag: 'Trayectoria',
@@ -86,7 +86,7 @@ export const translations = {
       title: 'Ponte en',
       titleSpan: 'Contacto',
       description: 'Estoy abierta a oportunidades para seguir aprendiendo y crecer profesionalmente en el desarrollo de software.',
-      channels: 'Canales de Contacto',
+      channels: 'Información de contacto',
       sendMessage: 'Envíame un mensaje',
       nameLabel: 'Nombre',
       namePlaceholder: 'Tu nombre completo',
@@ -96,7 +96,7 @@ export const translations = {
       messagePlaceholder: 'Cuéntame sobre tu proyecto, propuesta o idea...',
       sendBtn: 'Enviar mensaje',
       successMsg: '¡Mensaje enviado! Te responderé pronto.',
-      callout: '¡Cuéntame sobre tu proyecto o idea! Estoy lista para colaborar.',
+      callout: '¿Tienes un proyecto o idea en mente? Estoy lista para colaborar.',
     },
     footer: {
       role: 'Ingeniería de Software',
@@ -109,7 +109,7 @@ export const translations = {
 
   en: {
     nav: {
-      home: 'Home', about: 'About me', ai: 'AI', projects: 'Projects',
+      home: 'Home', about: 'About me', ai: 'Tools', projects: 'Projects',
       experience: 'Experience', testimonials: 'Testimonials', game: 'Game', contact: 'Contact',
     },
     hero: {
@@ -117,13 +117,13 @@ export const translations = {
       greeting: 'Hello!\nI\'m',
       tagline1: 'Software Engineering',
       tagline2: 'Ready for new projects',
-      bio: 'I\'m a developer passionate about web development and creating digital solutions. I love transforming ideas into functional, intuitive and attractive experiences.',
+      bio: 'Developer focused on building functional and attractive digital solutions. Passionate about modern frontend and continuous learning.',
       cta1: 'View Projects',
       cta2: 'Download CV',
       stats: [
         { n: '10+', l: 'Projects' },
         { n: '3+',  l: 'Years studying' },
-        { n: '5+',  l: 'Technologies' },
+        { n: '6+',  l: 'Technologies' },
       ],
     },
     about: {
@@ -131,9 +131,9 @@ export const translations = {
       title: 'About',
       titleSpan: 'Me',
       paragraphs: [
-        'I am a <strong>responsible, creative and committed</strong> person with constant learning, always looking to improve my technical and personal skills.',
-        'I\'m interested in web development in <strong>frontend and backend</strong>, strengthening my skills in React, Next.js and Django.',
-        'My goal is to grow as a developer, participate in challenging projects and provide innovative solutions with real impact.',
+        'I am a <strong>Software Engineering</strong> student and developer focused on building functional and attractive digital solutions. I am responsible, creative and committed to continuous learning — always looking to grow both technically and personally.',
+        'My main interest lies in <strong>frontend development</strong>, where I enjoy building modern and intuitive interfaces with <strong>React and Next.js</strong>, while complementing my skills with Django on the backend for a more complete development perspective.',
+        'I have worked on collaborative projects that have strengthened my teamwork and problem-solving skills. I am also interested in integrating <strong>artificial intelligence</strong> into applications to deliver real value. My goal is to keep growing, take on new challenges, and build impactful solutions.',
       ],
       facts: [
         { icon: 'fas fa-graduation-cap', label: 'University', val: 'UCC Pasto' },
@@ -144,16 +144,16 @@ export const translations = {
       techStack: 'Tech Stack',
     },
     ai: {
-      tag: 'Modern tooling',
-      title: 'AI Tools I',
-      titleSpan: 'Use',
-      description: 'I integrate AI tools into my workflow to boost productivity, improve code quality and speed up development.',
+      tag: 'Boosted productivity',
+      title: 'Intelligent tools',
+      titleSpan: 'I use',
+      description: 'I integrate AI tools into my workflow to write better code, document faster and explore creative solutions in every project.',
     },
     projects: {
       tag: 'My work',
       title: 'My',
       titleSpan: 'Projects',
-      description: 'Projects focused on learning and applying software engineering concepts, from web development to monitoring systems.',
+      description: 'Projects reflecting my learning and application of software engineering: from deployed interfaces to monitoring systems and educational platforms.',
     },
     experience: {
       tag: 'Background',
@@ -192,7 +192,7 @@ export const translations = {
       title: 'Get in',
       titleSpan: 'Touch',
       description: 'I\'m open to opportunities to keep learning and grow professionally in software development.',
-      channels: 'Contact Channels',
+      channels: 'Contact information',
       sendMessage: 'Send me a message',
       nameLabel: 'Name',
       namePlaceholder: 'Your full name',
@@ -202,7 +202,7 @@ export const translations = {
       messagePlaceholder: 'Tell me about your project, proposal or idea...',
       sendBtn: 'Send message',
       successMsg: 'Message sent! I\'ll reply soon.',
-      callout: 'Tell me about your project or idea! I\'m ready to collaborate.',
+      callout: 'Have a project or idea in mind? I\'m ready to collaborate.',
     },
     footer: {
       role: 'Software Engineering',
