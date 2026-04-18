@@ -4,7 +4,7 @@ import ThemeProvider from '@/components/ui/ThemeProvider'
 import { LangProvider } from '@/context/LangContext'
 
 export const metadata: Metadata = {
-  title: 'Vanessa Mena — Portfolio',
+  title: 'Vanessa Mena — Portafolio',
   description: 'Ingeniería de Software | Desarrolladora | React · Next.js · Django',
 }
 
