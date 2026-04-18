@@ -6,6 +6,7 @@ import { LangProvider } from '@/context/LangContext'
 export const metadata: Metadata = {
   title: 'Vanessa Mena — Portafolio',
   description: 'Ingeniería de Software | Desarrolladora | React · Next.js · Django',
+  icons: { icon: '/favicon.svg' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
