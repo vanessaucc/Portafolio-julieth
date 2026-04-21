@@ -1,5 +1,6 @@
-import TopNav      from '@/components/layout/TopNav'
-import SocialFloat  from '@/components/layout/SocialFloat'
+import TopNav           from '@/components/layout/TopNav'
+import SocialFloat       from '@/components/layout/SocialFloat'
+import CloudBackground   from '@/components/ui/CloudBackground'
 import Hero         from '@/components/sections/Hero'
 import About        from '@/components/sections/About'
 import AiTools      from '@/components/sections/AiTools'
@@ -13,6 +14,7 @@ import Footer       from '@/components/layout/Footer'
 export default function Home() {
   return (
     <>
+      <CloudBackground />
       <TopNav />
       <SocialFloat />
       <main className="pt-16 w-full">

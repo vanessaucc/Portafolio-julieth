@@ -134,12 +134,20 @@
 .animate-heart-pulse { animation: heart-pulse  1.2s ease-in-out infinite; }
 .animate-blink       { animation: blink 1s step-end infinite; }
 
+/* ── Cloud drift ── */
+@keyframes cloud-drift {
+  from { transform: translateX(110vw); }
+  to   { transform: translateX(calc(-100% - 40px)); }
+}
+.cloud-drift { animation: cloud-drift linear infinite; }
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero-fade-up,
   .animate-float-slow,
   .animate-float-alt,
   .animate-float,
-  .animate-heart-pulse { animation: none; }
+  .animate-heart-pulse,
+  .cloud-drift { animation: none; }
   .card::after { display: none; }
 }
