@@ -16,7 +16,7 @@ function StarRating({ stars }: { stars: number }) {
 }
 
 export default function Testimonials() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const tm = t.testimonials
 
   return (
@@ -33,14 +33,14 @@ export default function Testimonials() {
               <div className="card flex flex-col gap-4 relative overflow-hidden h-full">
                 <span className="absolute -top-2 right-4 text-[5rem] text-brand-500/10 font-display font-extrabold leading-none pointer-events-none select-none" aria-hidden>&ldquo;</span>
                 <StarRating stars={item.stars} />
-                <p className="text-[0.9rem] leading-[1.7] text-ink-secondary italic flex-1">&ldquo;{item.text}&rdquo;</p>
+                <p className="text-[0.9rem] leading-[1.7] text-ink-secondary italic flex-1">&ldquo;{lang === 'es' ? item.textEs : item.textEn}&rdquo;</p>
                 <div className="flex items-center gap-3 border-t border-brand-500/20 pt-3">
                   <div className="w-[42px] h-[42px] rounded-full bg-brand-500/15 border-2 border-brand-500/25 flex items-center justify-center text-brand-600 dark:text-brand-300 font-display font-bold text-[0.85rem]">
                     {item.avatar}
                   </div>
                   <div>
                     <div className="font-display font-bold text-[0.9rem] text-ink-primary">{item.name}</div>
-                    <div className="text-[0.75rem] text-brand-600 dark:text-brand-400 font-medium">{item.role}</div>
+                    <div className="text-[0.75rem] text-brand-600 dark:text-brand-400 font-medium">{lang === 'es' ? item.roleEs : item.roleEn}</div>
                   </div>
                 </div>
               </div>

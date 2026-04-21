@@ -4,9 +4,15 @@ import AnimateIn from '@/components/ui/AnimateIn'
 import { education, experience, type EducationItem, type ExperienceItem } from '@/data/experience'
 import { useLang } from '@/context/LangContext'
 
-type TimelineEntry = (EducationItem | ExperienceItem) & { degree?: string; role?: string; institution?: string; company?: string; location?: string }
+function TimelineItem({ item, delay, lang }: { item: EducationItem | ExperienceItem; delay: number; lang: string }) {
+  const isEdu = 'degreeEs' in item
+  const title = isEdu
+    ? (lang === 'es' ? (item as EducationItem).degreeEs : (item as EducationItem).degreeEn)
+    : (lang === 'es' ? (item as ExperienceItem).roleEs : (item as ExperienceItem).roleEn)
+  const org = isEdu ? (item as EducationItem).institution : (item as ExperienceItem).company
+  const loc = isEdu ? (item as EducationItem).location : null
+  const desc = lang === 'es' ? item.descriptionEs : item.descriptionEn
 
-function TimelineItem({ item, delay }: { item: TimelineEntry; delay: number }) {
   return (
     <AnimateIn delay={delay} direction="up">
       <div className="flex gap-4 relative">
@@ -16,13 +22,12 @@ function TimelineItem({ item, delay }: { item: TimelineEntry; delay: number }) {
         </div>
         <div className="card flex-1 !p-5">
           <div className="text-[0.72rem] font-bold tracking-[0.08em] uppercase text-brand-500 mb-1 font-display">{item.period}</div>
-          <h3 className="font-display font-bold text-[0.95rem] text-ink-primary mb-1">{'degree' in item ? item.degree : item.role}</h3>
+          <h3 className="font-display font-bold text-[0.95rem] text-ink-primary mb-1">{title}</h3>
           <div className="text-[0.8rem] text-brand-600 dark:text-brand-400 flex items-center gap-1.5 mb-2">
             <i className="fas fa-building" />
-            {'institution' in item ? item.institution : (item as ExperienceItem).company}
-            {'location' in item && item.location && ` — ${item.location}`}
+            {org}{loc && ` — ${loc}`}
           </div>
-          <p className="text-[0.82rem] leading-[1.6] text-ink-secondary">{item.description}</p>
+          <p className="text-[0.82rem] leading-[1.6] text-ink-secondary">{desc}</p>
         </div>
       </div>
     </AnimateIn>
@@ -30,7 +35,7 @@ function TimelineItem({ item, delay }: { item: TimelineEntry; delay: number }) {
 }
 
 export default function Experience() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const e = t.experience
 
   return (
@@ -50,7 +55,7 @@ export default function Experience() {
               </h3>
               <div className="flex flex-col gap-6 relative before:content-[''] before:absolute before:left-5 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-brand-400/50 before:to-brand-500/20">
                 {col.items.map((item, i) => (
-                  <TimelineItem key={i} item={item as TimelineEntry} delay={i * 100} />
+                  <TimelineItem key={i} item={item} delay={i * 100} lang={lang} />
                 ))}
               </div>
             </div>

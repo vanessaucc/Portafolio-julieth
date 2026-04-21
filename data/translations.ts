@@ -19,6 +19,7 @@ export const translations = {
         { n: '3+',  l: 'Años estudiando' },
         { n: '6+',  l: 'Tecnologías' },
       ],
+      openToWork: 'Disponible para trabajar',
     },
     about: {
       tag: 'Conóceme',
@@ -125,6 +126,7 @@ export const translations = {
         { n: '3+',  l: 'Years studying' },
         { n: '6+',  l: 'Technologies' },
       ],
+      openToWork: 'Open to work',
     },
     about: {
       tag: 'About Me',

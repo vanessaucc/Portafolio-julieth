@@ -5,7 +5,7 @@ import { projects } from '@/data/projects'
 import { useLang } from '@/context/LangContext'
 
 export default function Projects() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const p = t.projects
 
   return (
@@ -28,8 +28,8 @@ export default function Projects() {
                   }}>
                   <i className={proj.icon} />
                 </div>
-                <h3 className="font-display font-bold text-base text-ink-primary leading-[1.3]">{proj.title}</h3>
-                <p className="text-[0.85rem] leading-[1.6] text-ink-secondary flex-1">{proj.description}</p>
+                <h3 className="font-display font-bold text-base text-ink-primary leading-[1.3]">{lang === 'es' ? proj.titleEs : proj.titleEn}</h3>
+                <p className="text-[0.85rem] leading-[1.6] text-ink-secondary flex-1">{lang === 'es' ? proj.descriptionEs : proj.descriptionEn}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {proj.tags.map(tag => <span key={tag} className="badge">{tag}</span>)}
                 </div>
