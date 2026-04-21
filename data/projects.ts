@@ -45,8 +45,8 @@ export const projects: Project[] = [
     color: '#9333ea',
   },
   {
-    titleEs: 'Sistema de Monitoreo con Grafana',
-    titleEn: 'Monitoring System with Grafana',
+    titleEs: 'Landingpage',
+    titleEn: 'Landingpage',
     descriptionEs: 'Implementación de un sistema de monitoreo de métricas con Grafana y Prometheus. Visualización en tiempo real de indicadores de rendimiento del sistema.',
     descriptionEn: 'Implementation of a metrics monitoring system with Grafana and Prometheus. Real-time visualization of system performance indicators.',
     tags: ['Grafana', 'Prometheus', 'DevOps', 'Metrics'],
@@ -56,8 +56,8 @@ export const projects: Project[] = [
     color: '#a855f7',
   },
   {
-    titleEs: 'Servicios de Mascotas',
-    titleEn: 'Pet Services Platform',
+    titleEs: 'interfaz-de-clase-de-IA',
+    titleEn: 'interfaz-de-clase-de-IA',
     descriptionEs: 'Aplicación web que conecta usuarios con servicios de cuidado y paseo de mascotas. Desarrollada con Django y MySQL, incluye autenticación, perfiles y búsqueda de servicios.',
     descriptionEn: 'Web application connecting users with pet care and walking services. Built with Django and MySQL, includes authentication, profiles and service search.',
     tags: ['Django', 'Python', 'MySQL', 'HTML/CSS'],
