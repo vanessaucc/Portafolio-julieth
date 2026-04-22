@@ -8,7 +8,6 @@ Personal developer portfolio built with **Next.js 14**, **TypeScript**, and **Ta
 - **Dark/Light mode** — persisted via `localStorage`
 - **Responsive** — mobile-first design, tested from 375px to 1440px
 - **Sections**: Hero · About · Projects · Experience · Testimonials · Typing game · Contact
-- **Contact form** — sends email via [Resend](https://resend.com), with server-side validation
 - **Typing game** — measure your WPM and accuracy on real code snippets
 
 ## Tech Stack
@@ -41,17 +40,6 @@ npm install
 ### Environment variables
 
 Create a `.env.local` file in the project root:
-
-```env
-RESEND_API_KEY=re_your_api_key_here
-```
-
-To obtain a Resend API key:
-1. Sign up at [resend.com](https://resend.com) (free tier: 100 emails/day)
-2. Go to **API Keys** and create a new key
-3. Paste it into `.env.local`
-
-> **Without the key**: the contact form still works in development — messages are logged to the terminal console instead of being emailed.
 
 ### Run locally
 
@@ -91,7 +79,6 @@ The form at `/contact` sends a `POST` request to the Next.js API route `app/api/
 
 ```
 app/
-  api/contact/route.ts   # Contact form API endpoint
   globals.css            # CSS variables + Tailwind layers
   layout.tsx             # Root layout (fonts, ThemeProvider)
   page.tsx               # Main page (all sections composed here)
