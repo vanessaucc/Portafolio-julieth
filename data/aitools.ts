@@ -43,7 +43,7 @@ export const aiTools: AiTool[] = [
     descEn: 'AI-powered code editor with refactoring and code generation capabilities.',
   },
   {
-    name: 'v0 by Vercel',
+    name: 'V0 by Vercel',
     icon: 'fas fa-wand-magic-sparkles',
     color: '#e879f9',
     descEs: 'Generación de componentes UI con IA a partir de descripciones en lenguaje natural.',
