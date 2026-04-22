@@ -56,25 +56,6 @@ npm run build
 npm start
 ```
 
-## Contact Form — How It Works
-
-The form at `/contact` sends a `POST` request to the Next.js API route `app/api/contact/route.ts`.
-
-**Server-side validation:**
-- All fields (`name`, `email`, `message`) are required
-- Email is validated against a basic regex
-- Message must be at least 10 characters
-
-**Email delivery:**
-- Sent via Resend SDK to `vmena7604@gmail.com`
-- The sender is shown as `Portfolio Contact <onboarding@resend.dev>`
-- The `replyTo` header is set to the visitor's email so you can reply directly
-
-**Error handling:**
-- `400` — validation failed (missing/invalid fields)
-- `500` — Resend API error
-- `200` — success; form resets and shows a confirmation banner
-
 ## Project Structure
 
 ```
