@@ -21,9 +21,6 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center flex-shrink-0 shadow-glow-sm relative">
             <span className="font-display font-extrabold text-[1.1rem] text-white">VM</span>
-            <img src="/vanessa.jpg" alt="Vanessa Mena"
-              className="absolute inset-0 w-full h-full object-cover object-top"
-              onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
           </div>
           <div>
             <p className="font-display font-bold text-[0.92rem] text-white">Vanessa Mena</p>
@@ -31,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <nav className="flex flex-col gap-2">
+        <nav className="grid grid-cols-3 gap-2 max-[500px]:grid-cols-2">
           {navLinks.map(([href, label]) => (
             <a key={href} href={href} className="text-white/50 no-underline text-[0.85rem] transition-colors hover:text-brand-300">{label}</a>
           ))}
@@ -53,7 +50,7 @@ export default function Footer() {
       <div className="flex justify-between items-center flex-wrap gap-2 max-[900px]:flex-col max-[900px]:text-center">
         <p className="text-xs text-white/35">© {year} Vanessa Mena — {f.rights}</p>
         <p className="text-xs text-white/35 flex items-center gap-1">
-          {f.madeWith} <span className="text-brand-400 animate-heart-pulse inline-block">♥</span> {f.inCity} · Next.js + Tailwind CSS
+          {f.madeWith} <span className="text-brand-400 animate-heart-pulse inline-block">♥</span> {f.inCity}
         </p>
       </div>
     </footer>

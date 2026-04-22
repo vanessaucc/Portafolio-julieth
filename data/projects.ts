@@ -36,9 +36,9 @@ export const projects: Project[] = [
   {
     titleEs: 'Portafolio Web Personal',
     titleEn: 'Personal Web Portfolio',
-    descriptionEs: 'Portafolio profesional desarrollado con Next.js aplicando principios de diseño UI/UX modernos. Incluye secciones de proyectos, experiencia, herramientas y contacto.',
+    descriptionEs: 'Portafolio profesional desarrollado con React y TypeScript aplicando principios de diseño UI/UX modernos. Incluye secciones de proyectos, experiencia, herramientas y contacto.',
     descriptionEn: 'Professional portfolio developed with Next.js applying modern UI/UX design principles. Includes projects, experience, tools and contact sections.',
-    tags: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
     icon: 'fas fa-briefcase',
     github: 'https://github.com/vanessaucc/Portafolio-julieth',
     demo: null,

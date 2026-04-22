@@ -47,8 +47,12 @@ export default function About() {
                 {skills.map(s => (
                   <div key={s.name}
                     className="flex flex-col items-center gap-2 p-3 rounded-xl border border-brand-500/10 dark:border-white/[0.06] bg-brand-500/5 dark:bg-white/[0.03] hover:border-brand-500/30 hover:bg-brand-500/10 transition-all duration-200 cursor-default group">
-                    <i className={`${s.icon} text-[1.5rem] transition-transform duration-200 group-hover:scale-110`}
-                      style={{ color: s.color }} />
+                    {s.icon.startsWith('http') ? (
+                      <img src={s.icon} alt={s.name} className="w-6 h-6 transition-transform duration-200 group-hover:scale-110" />
+                    ) : (
+                      <i className={`${s.icon} text-[1.5rem] transition-transform duration-200 group-hover:scale-110`}
+                        style={{ color: s.color }} />
+                    )}
                     <span className="text-[0.65rem] font-semibold text-ink-muted text-center leading-tight">{s.name}</span>
                   </div>
                 ))}

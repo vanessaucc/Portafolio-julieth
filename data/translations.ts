@@ -27,7 +27,7 @@ export const translations = {
       titleSpan: 'Mí',
       paragraphs: [
         'Soy estudiante de <strong>Ingeniería de Software</strong> y desarrolladora enfocada en la creación de soluciones digitales funcionales y atractivas. Me caracterizo por ser responsable, creativa y por mantener un aprendizaje constante para mejorar tanto a nivel técnico como personal.',
-        'Mi mayor interés está en el <strong>desarrollo frontend</strong>, donde disfruto construir interfaces modernas e intuitivas con <strong>React y Next.js</strong>, complementando mis habilidades con backend en Django para tener una visión más completa del desarrollo.',
+        'Mi mayor interés está en el <strong>desarrollo frontend</strong>, donde disfruto construir interfaces modernas e intuitivas con <strong>React, TypeScript y Tailwind CSS</strong>, complementando mis habilidades con backend en Django para tener una visión más completa del desarrollo.',
         'He participado en proyectos colaborativos que han fortalecido mi trabajo en equipo y mi capacidad para resolver problemas. También me interesa integrar <strong>inteligencia artificial</strong> en aplicaciones para aportar valor real. Mi objetivo es seguir creciendo, asumir nuevos retos y crear soluciones con impacto.',
       ],
       facts: [

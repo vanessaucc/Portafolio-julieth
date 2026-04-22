@@ -21,6 +21,13 @@ const config: Config = {
           800: '#6d28d9',
           900: '#8c42fb',
         },
+        accent: {
+          100: '#bfdbfe',
+          200: '#93c5fd',
+          300: '#60a5fa',
+          400: '#3b82f6',
+          500: '#2563eb',
+        },
         surface: {
           DEFAULT: 'var(--surface)',
           card:    'var(--surface-card)',
@@ -45,6 +52,7 @@ const config: Config = {
         glow:      '0 8px 32px rgba(124,58,237,0.15)',
         'glow-lg': '0 8px 25px rgba(192,132,252,0.4)',
         'glow-sm': '0 4px 15px rgba(192,132,252,0.4)',
+        'glow-blue': '0 8px 32px rgba(59,130,246,0.2)',
       },
       keyframes: {
         'spin-slow':    { from: { transform: 'rotate(0deg)' },   to: { transform: 'rotate(360deg)' } },

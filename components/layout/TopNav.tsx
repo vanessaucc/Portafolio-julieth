@@ -52,9 +52,6 @@ export default function TopNav() {
         <a href="#home" onClick={() => handleNavClick('#home')} className="flex items-center gap-3 no-underline flex-shrink-0" aria-label="Home">
           <div className="w-9 h-9 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center relative shadow-glow-sm flex-shrink-0">
             <span className="font-display font-extrabold text-white text-sm">VM</span>
-            <img src="/vanessa.jpg" alt="" aria-hidden
-              className="absolute inset-0 w-full h-full object-cover object-top"
-              onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
           </div>
           <span className="font-display font-bold text-[0.9rem] text-ink-primary hidden sm:block">Vanessa Mena</span>
         </a>
